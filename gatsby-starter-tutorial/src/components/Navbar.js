@@ -6,7 +6,7 @@ const Navbar = () => {
     [
       {
         list: 'Home',
-        link: '\/',
+        link: '/',
       },
       {
         list: 'Blog',
@@ -22,7 +22,9 @@ const Navbar = () => {
     <nav>
       <ul>
         {navArray.map((item, index) => (
-          <Link key={index} to={item.link}>{item.list}</Link>
+          <li key={index}>
+            <Link to={item.link}>{item.list}</Link>
+          </li>
         ))}
       </ul>
     </nav>
